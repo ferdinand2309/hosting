@@ -1,0 +1,54 @@
+td{
+  text-align: center;
+  margin: 2px;
+}
+.vista{
+  text-align: center;
+  border: solid 1px skyblue;
+  background: #76943c;
+}
+.vista1{
+  text-align: center;
+  border: solid 1px skyblue;
+  width: 400px;
+    background: #76943c;
+}
+.vista2{
+  text-align: center;
+  border: solid 1px skyblue;
+  width: 130px;
+    background: #76943c;
+}
+.vista3{
+  text-align: center;
+  border: solid 1px skyblue;
+  width: 200px;
+    background: #76943c;
+}
+.vista4{
+  text-align: center;
+  border: solid 1px skyblue;
+  width: 300px;
+    background: #76943c;
+}
+.vista5{
+  text-align: center;
+  border: solid 1px skyblue;
+  width: 500px;
+    background: #76943c;
+}
+.usuers{
+  text-align: center;
+  border: solid 1px black;
+    background: #c4d79b;
+}
+.centro{
+  text-align: center;
+  border: solid 1px skyblue;
+  background: #76943c;
+}
+.centro2{
+  text-align: center;
+  border: solid 1px black;
+    background: #c4d79b;
+}

@@ -1,0 +1,56 @@
+.logo{
+  float: left;
+}
+.letras{
+  float: right;
+}
+#prin{/*platilla personal*/
+		margin: 4px;
+		text-align: center;
+		background: #76943c;
+}
+.DP,.dp, .dl, .datosplaza{
+  background: #fcd5b4;
+	text-align: center;
+	border: solid 2px skyblue;
+	font-size: 25px;
+}
+.datos{
+	background: #c4d79b;
+	border: solid 2px yellow;
+  padding: 5px;
+}
+#nombre{
+  width: 350px;
+}
+.datos2{
+	background: #c4d79b;
+	border: solid 2px yellow;
+  padding: 5px;
+}
+#callenum, #colo, #coep{
+    width: 250px;
+}
+#nlp, #nombre_lin_ce_afin{
+  width: 300px;
+}
+.fun{
+	background: #c4d79b;
+	border: solid 2px yellow;
+  padding: 5px;
+}
+.EFECTOS{
+	text-align: center;
+  background: #b7dee8;
+}
+#procesoevaluacion{
+  width: 250px;
+}
+#procesoplaza{
+  width: 330px;
+}
+.dtp{
+	background: #c4d79b;
+	border: solid 2px yellow;
+  padding: 5px;
+}

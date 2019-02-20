@@ -1,0 +1,55 @@
+from __future__ import absolute_import
+
+from django.db import models
+
+class datoslaborales(models.Model):
+    nombre = models.CharField(max_length=50)
+    rfc = models.CharField(max_length=25)
+    curp = models.CharField(max_length=25)
+    calle_numero = models.CharField(max_length=100)
+    colonia = models.CharField(max_length=50)
+    delegacion = models.CharField(max_length=50)
+    codigo_pos = models.CharField(max_length=20)
+    entidad = models.CharField(max_length=50)
+    telefono_part = models.CharField(max_length=25)
+    telefono_cel = models.CharField(max_length=25)
+    correo_per = models.EmailField(null=True)
+    escolaridad = models.CharField(max_length=100)
+    nombre_lin_ce_afin = models.CharField(max_length=100)
+    numero_cedula = models.CharField(max_length=25)
+    nombre_lin_ce_noafin = models.CharField(max_length=100, null=True, blank=True)
+    numero_cedula_noafin = models.CharField(max_length=25, null=True, blank=True)
+    clinica = models.CharField(max_length=100)
+    banco = models.CharField(max_length=50)
+
+    funcion = models.CharField(max_length=100)
+    clave_presupuestal = models.CharField(max_length=27)
+    motivo = models.CharField(max_length=100)
+    adscrip = models.CharField(max_length=100)
+    escuela = models.CharField(max_length=100)
+    clave_eco = models.CharField(max_length=50)
+    cct = models.CharField(max_length=100)
+    zona_esco = models.CharField(max_length=50)
+    cct_cobro = models.CharField(max_length=100)
+    horas_cct = models.CharField(max_length=25, null=True, blank=True)
+    efecto_desde = models.CharField(max_length=100)
+    efecto_hasta = models.CharField(max_length=100)
+    ingre_sep = models.CharField(max_length=100)
+    ingre_gob = models.CharField(max_length=100)
+    obtubo_plaza = models.CharField(max_length=100)
+    proceso_evaluacion = models.CharField(max_length=100)
+    nivel_carrera = models.CharField(max_length=10)
+    sdpc = models.CharField(max_length=50)
+
+    adscrip_adi = models.CharField(max_length=100,null=True, blank=True)
+    escuela_adi = models.CharField(max_length=100, blank=True)
+    clave_eco_adi = models.CharField(max_length=100, blank=True)
+    cct_adi = models.CharField(max_length=100, blank=True)
+    zona_esco_adi = models.CharField(max_length=25, blank=True)
+    cct_cobro_adi = models.CharField(max_length=100, blank=True)
+    clave_presupuestal_adi = models.CharField(max_length=30, blank=True)
+    expe_docente = models.CharField(max_length=10, null=True, blank=True)
+    expe_sinfunciones = models.CharField(max_length=10, null=True, blank=True)
+
+    def __unicode__(self):
+        return self.nombre

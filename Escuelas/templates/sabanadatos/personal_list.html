@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Personal</title>
+    <link rel="stylesheet" href="{% static 'css/estilolistar.css' %}">
+     <a href="{% url 'logout' %}" class="buttonn">Salir</a>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th class="centro" rowspan="3">Ciclo Escolar</th>
+        <th class="centro" rowspan="3">Nombre del Centro</th>
+        <th class="centro" rowspan="3">Telefono</th>
+        <th class="centro" rowspan="3">Centro de Trabajo</th>
+        <th class="centro" rowspan="3">Dirección Operativa</th>
+        <th class="centro" rowspan="3">Clave Economica</th>
+        <th class="centro" colspan="7">Turno</td>
+        <th class="centro" rowspan="3">N° de zona</th>
+        <th class="centro" rowspan="3">Domicilio</th>
+        <th class="centro" rowspan="3">Nombre del Responsable</th>
+        <th class="centro" colspan="3">Situación del Responsable del Plantel</th>
+        <th class="centro" rowspan="3">Correo Institucional</th>
+        <th class="centro" rowspan="3">Fecha de elaboración:</th>
+        <th class="centro" colspan="8">Grupos</th>
+        <th class="centro" colspan="8">Matricula</th>
+        <th class="centro" colspan="8">Docentes</th>
+        <th class="centro" rowspan="3">Director(a)</th>
+        <th class="centro" rowspan="3">Docentes Frente a Grupo</th>
+        <th class="centro" rowspan="3">Subdirector de Gestión Escolar</th>
+        <th class="centro" rowspan="3">Subdirector Académico</th>
+        <th class="centro" rowspan="3">Maestro de Taller de Lectura y Escritura</th>
+        <th class="centro" rowspan="3">Promotor de TIC (E0280)</th>
+        <th class="centro" rowspan="3">Promotor de TIC (Clave de  horas)</th>
+        <th class="centro" rowspan="3">Docente sin Grupo</th>
+        <th class="centro" rowspan="3">Docente con Cambio de Actividad</th>
+        <th class="centro" rowspan="3">Docente OTN</th>
+        <th class="centro" rowspan="3">Total</th>
+        <th class="centro" rowspan="3">Conserje</th>
+        <th class="centro" rowspan="3">Conserje C/A</th>
+        <th class="centro" rowspan="3">Asistente de Servicios en Plantel</th>
+        <th class="centro" rowspan="3">Asistente de Servicios en Plantel C/A</th>
+        <th class="centro" rowspan="3">Asistente de Servicios en Plantel OTN</th>
+        <th class="centro" rowspan="3">Total</th>
+        <th class="centro" rowspan="3">Administrativo</th>
+        <th class="centro" rowspan="3">Docente (s) de Educación Física</th>
+        <th class="centro" rowspan="3">Docente (s) de Educación Física C/A</th>
+        <th class="centro" rowspan="3">Docente (s) de Inglés</th>
+        <th class="centro" rowspan="3">Docente (s) de Inglés C/A</th>
+        <th class="centro" rowspan="3">Docente (s) de Educación Artistica</th>
+        <th class="centro" rowspan="3">Docente(s) Música</th>
+        <th class="centro" rowspan="3">TOTAL</th>
+        <th class="centro" colspan="10">EXCLUSIVAMENTE ZONA ESCOLAR</th>
+        <th class="centro" colspan="55">APOYOS</th>
+      </tr>
+      <tr>
+        <td class="centro" rowspan="2">MAT</td>
+        <td class="centro" rowspan="2">VES</td>
+        <td class="centro" rowspan="2">J.A</td>
+        <td class="centro" rowspan="2">T.C</td>
+        <td class="centro"rowspan="2">EPS</td>
+        <td class="centro"rowspan="2">NOCT</td>
+        <td class="centro"rowspan="2">ZONA</td>
+        <td class="centro"rowspan="2">Dictaminado</td>
+        <td class="centro"rowspan="2">Encargado</td>
+        <td class="centro"rowspan="2">Promoción</td>
+        <td class="centro"rowspan="2">1º</td>
+        <td class="centro"rowspan="2">2º</td>
+        <td class="centro"rowspan="2">3º</td>
+        <td class="centro"rowspan="2">4º</td>
+        <td class="centro"rowspan="2">5º</td>
+        <td class="centro"rowspan="2">6º</td>
+        <td class="centro"rowspan="2">9/4</td>
+        <td class="centro"rowspan="2">Total</td>
+        <td class="centro"rowspan="2">1º</td>
+        <td class="centro"rowspan="2">2º</td>
+        <td class="centro"rowspan="2">3º</td>
+        <td class="centro"rowspan="2">4º</td>
+        <td class="centro"rowspan="2">5º</td>
+        <td class="centro"rowspan="2">6º</td>
+        <td class="centro"rowspan="2">9/4</td>
+        <td class="centro"rowspan="2">Total</td>
+        <td class="centro"rowspan="2">1º</td>
+        <td class="centro"rowspan="2">2º</td>
+        <td class="centro"rowspan="2">3º</td>
+        <td class="centro"rowspan="2">4º</td>
+        <td class="centro" rowspan="2">5º</td>
+        <td class="centro" rowspan="2">6º</td>
+        <td class="centro" rowspan="2">9/4</td>
+        <td class="centro" rowspan="2">Total</td>
+        <th class="centro" colspan="5">Supervisor</th>
+        <th class="centro" colspan="5">Supervisor E.F.</th>
+        <th class="centro" colspan="5">ATP Matemáticas dictaminado</th>
+        <th class="centro" colspan="5">ATP Lenguaje oral y escrito dictaminado</th>
+        <th class="centro" colspan="5">Director</th>
+        <th class="centro" colspan="5">Director OTN</th>
+        <th class="centro" colspan="5">Docente</th>
+        <th class="centro" colspan="5">Docente C/A</th>
+        <th class="centro" colspan="5">Docente OTN</th>
+        <th class="centro" colspan="5">Docente E.F.</th>
+        <th class="centro" colspan="5">Docente E.F. C/A</th>
+        <th class="centro" colspan="5">ASP (Funciones Administrativas)</th>
+        <th class="centro" colspan="5">Administrativo</th>
+      </tr>
+
+      <tr>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="centro">MAT</td>
+        <td class="centro">VESP</td>
+        <td class="centro">DISC.</td>
+        <td class="centro">OTRO</td>
+        <td class="centro">Total</td>
+        <td class="vista1">Acciones</td>
+      </tr>
+      <tbody>
+        {% if Centros %}
+        {% for centro in Centros %}
+        <tr>
+          <td class="centro2">{{centro.ciclo_escolar}}</td>
+          <td class="centro2">{{centro.Nombre_Centro}}</td>
+          <td class="centro2">{{centro.telefono}}</td>
+          <td class="centro2">{{centro.centro_trabajo}}</td>
+          <td class="centro2">{{centro.direccion_operativa}}</td>
+          <td class="centro2">{{centro.clave_economica}}</td>
+          <td class="centro2">{{centro.mat}}</td>
+          <td class="centro2">{{centro.vesp}}</td>
+          <td class="centro2">{{centro.j_a}}</td>
+          <td class="centro2">{{centro.t_c}}</td>
+          <td class="centro2">{{centro.eps}}</td>
+          <td class="centro2">{{centro.noct}}</td>
+          <td class="centro2">{{centro.zona}}</td>
+          <td class="centro2">{{centro.n_zona}}</td>
+          <td class="centro2">{{centro.domicilio_intitucional}}</td>
+          <td class="centro2">{{centro.nombre_responsable}}</td>
+          <td class="centro2">{{centro.dictaminado}}</td>
+          <td class="centro2">{{centro.encargado}}</td>
+          <td class="centro2">{{centro.promocion}}</td>
+          <td class="centro2">{{centro.correo_intitucional}}</td>
+          <td class="centro2">{{centro.fecha_elaboracion}}</td>
+          <td class="centro2">{{centro.grupo_pri}}</td>
+          <td class="centro2">{{centro.grupo_seg}}</td>
+          <td class="centro2">{{centro.grupo_ter}}</td>
+          <td class="centro2">{{centro.grupo_cua}}</td>
+          <td class="centro2">{{centro.grupo_qui}}</td>
+          <td class="centro2">{{centro.grupo_sex}}</td>
+          <td class="centro2">{{centro.grupo_nueve_catorse}}</td>
+          <td class="centro2">{{centro.grupo_tot}}</td>
+          <td class="centro2">{{centro.matri_pri}}</td>
+          <td class="centro2">{{centro.matri_seg}}</td>
+          <td class="centro2">{{centro.matri_ter}}</td>
+          <td class="centro2">{{centro.matri_cua}}</td>
+          <td class="centro2">{{centro.matri_qui}}</td>
+          <td class="centro2">{{centro.matri_sex}}</td>
+          <td class="centro2">{{centro.matri_nueve_catorse}}</td>
+          <td class="centro2">{{centro.matri_tot}}</td>
+          <td class="centro2">{{centro.doce_pri}}</td>
+          <td class="centro2">{{centro.doce_seg}}</td>
+          <td class="centro2">{{centro.doce_ter}}</td>
+          <td class="centro2">{{centro.doce_cua}}</td>
+          <td class="centro2">{{centro.doce_qui}}</td>
+          <td class="centro2">{{centro.doce_sex}}</td>
+          <td class="centro2">{{centro.doce_nueve_catorse}}</td>
+          <td class="centro2">{{centro.doce_tot}}</td>
+          <td class="centro2">{{centro.director}}</td>
+          <td class="centro2">{{centro.docentes_frente_grupo}}</td>
+          <td class="centro2">{{centro.sub_gestion}}</td>
+          <td class="centro2">{{centro.sub_aca}}</td>
+          <td class="centro2">{{centro.maes_tall}}</td>
+          <td class="centro2">{{centro.Promotor_tic_e0280}}</td>
+          <td class="centro2">{{centro.Promotor_tic_horas}}</td>
+          <td class="centro2">{{centro.docentes_sin_grupo}}</td>
+          <td class="centro2">{{centro.docentes_cambio_actividad}}</td>
+          <td class="centro2">{{centro.Docente_OTN}}</td>
+          <td class="centro2">{{centro.total1}}</td>
+          <td class="centro2">{{centro.Conserje}}</td>
+          <td class="centro2">{{centro.Conserje_C_A}}</td>
+          <td class="centro2">{{centro.Asis_ser_plan}}</td>
+          <td class="centro2">{{centro.Asis_ser_plan_C_A}}</td>
+          <td class="centro2">{{centro.Asis_ser_plan_OTN}}</td>
+          <td class="centro2">{{centro.total2}}</td>
+          <td class="centro2">{{centro.administrativo}}</td>
+          <td class="centro2">{{centro.docentes_edu_fis}}</td>
+          <td class="centro2">{{centro.docentes_edu_fis_C_A}}</td>
+          <td class="centro2">{{centro.docentes_ingles}}</td>
+          <td class="centro2">{{centro.docentes_ingles_C_A}}</td>
+          <td class="centro2">{{centro.docentes_edu_art}}</td>
+          <td class="centro2">{{centro.docentes_musica}}</td>
+          <td class="centro2">{{centro.total3}}</td>
+          <td class="centro2">{{centro.Supervisor_Mat}}</td>
+          <td class="centro2">{{centro.Supervisor_Vep}}</td>
+          <td class="centro2">{{centro.Supervisor_Dis}}</td>
+          <td class="centro2">{{centro.Supervisor_Otr}}</td>
+          <td class="centro2">{{centro.Supervisor_Tot}}</td>
+          <td class="centro2">{{centro.Supervisor_E_F_Mat}}</td>
+          <td class="centro2">{{centro.Supervisor_E_F_Vep}}</td>
+          <td class="centro2">{{centro.Supervisor_E_F_Dis}}</td>
+          <td class="centro2">{{centro.Supervisor_E_F_Otr}}</td>
+          <td class="centro2">{{centro.Supervisor_E_F_Tot}}</td>
+          <td class="centro2">{{centro.APT_Mate_Dic_Mat}}</td>
+          <td class="centro2">{{centro.APT_Mate_Dic_Vep}}</td>
+          <td class="centro2">{{centro.APT_Mate_Dic_Dis}}</td>
+          <td class="centro2">{{centro.APT_Mate_Dic_Otr}}</td>
+          <td class="centro2">{{centro.APT_Mate_Dic_Tot}}</td>
+          <td class="centro2">{{centro.APT_LOE_Mat}}</td>
+          <td class="centro2">{{centro.APT_LOE_Vep}}</td>
+          <td class="centro2">{{centro.APT_LOE_Dis}}</td>
+          <td class="centro2">{{centro.APT_LOE_Otr}}</td>
+          <td class="centro2">{{centro.APT_LOE_Tot}}</td>
+          <td class="centro2">{{centro.Director_Mat}}</td>
+          <td class="centro2">{{centro.Director_Vep}}</td>
+          <td class="centro2">{{centro.Director_Dis}}</td>
+          <td class="centro2">{{centro.Director_Otr}}</td>
+          <td class="centro2">{{centro.Director_Tot}}</td>
+          <td class="centro2">{{centro.Director_OTN_Mat}}</td>
+          <td class="centro2">{{centro.Director_OTN_Vep}}</td>
+          <td class="centro2">{{centro.Director_OTN_Dis}}</td>
+          <td class="centro2">{{centro.Director_OTN_Otr}}</td>
+          <td class="centro2">{{centro.Director_OTN_Tot}}</td>
+          <td class="centro2">{{centro.Docente_Mat}}</td>
+          <td class="centro2">{{centro.Docente_Vep}}</td>
+          <td class="centro2">{{centro.Docente_Dis}}</td>
+          <td class="centro2">{{centro.Docente_Otr}}</td>
+          <td class="centro2">{{centro.Docente_Tot}}</td>
+          <td class="centro2">{{centro.Docente_C_A_Mat}}</td>
+          <td class="centro2">{{centro.Docente_C_A_Vep}}</td>
+          <td class="centro2">{{centro.Docente_C_A_Dis}}</td>
+          <td class="centro2">{{centro.Docente_C_A_Otr}}</td>
+          <td class="centro2">{{centro.Docente_C_A_Tot}}</td>
+          <td class="centro2">{{centro.Docente_OTN_Mat}}</td>
+          <td class="centro2">{{centro.Docente_OTN_Vep}}</td>
+          <td class="centro2">{{centro.Docente_OTN_Dis}}</td>
+          <td class="centro2">{{centro.Docente_OTN_Otr}}</td>
+          <td class="centro2">{{centro.Docente_OTN_Tot}}</td>
+          <td class="centro2">{{centro.Docente_E_F_Mat}}</td>
+          <td class="centro2">{{centro.Docente_E_F_Vep}}</td>
+          <td class="centro2">{{centro.Docente_E_F_Dis}}</td>
+          <td class="centro2">{{centro.Docente_E_F_Otr}}</td>
+          <td class="centro2">{{centro.Docente_E_F_Tot}}</td>
+          <td class="centro2">{{centro.Docente_E_F_C_A_Mat}}</td>
+          <td class="centro2">{{centro.Docente_E_F_C_A_Vep}}</td>
+          <td class="centro2">{{centro.Docente_E_F_C_A_Dis}}</td>
+          <td class="centro2">{{centro.Docente_E_F_C_A_Otr}}</td>
+          <td class="centro2">{{centro.Docente_E_F_C_A_Tot}}</td>
+          <td class="centro2">{{centro.ASP_Mat}}</td>
+          <td class="centro2">{{centro.ASP_Vep}}</td>
+          <td class="centro2">{{centro.ASP_Dis}}</td>
+          <td class="centro2">{{centro.ASP_Otr}}</td>
+          <td class="centro2">{{centro.ASP_Tot}}</td>
+          <td class="centro2">{{centro.administrativo_Mat}}</td>
+          <td class="centro2">{{centro.administrativo_Vep}}</td>
+          <td class="centro2">{{centro.administrativo_Dis}}</td>
+          <td class="centro2">{{centro.administrativo_Otr}}</td>
+          <td class="centro2">{{centro.administrativo_Tot}}</td>
+          <td>
+            <a href="{% url 'centro:Centro_edit' centro.id %}">Editar</a>
+            <a href="{% url 'centro:centro_eliminar' centro.id %}">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+
+        {% else %}
+        <h4>Aun no hay registros</h4>
+        {% endif %}
+      </tbody>
+    </table>
+    <table>
+        <tr>
+          <!--<td class="vista">Id</td>-->
+          <td class="vista1">Nombre</td>
+          <td class="vista2">Rfc</td>
+          <td class="vista3">Curp</td>
+          <td class="vista3">Calle y Numero</td>
+          <td class="vista4">Colonia</td>
+          <td class="vista2">Delegación</td>
+          <td class="vista2">Código Postal</td>
+          <td class="vista4">Entidad</td>
+          <td class="vista4">Teléfono Particular</td>
+          <td class="vista4">Teléfono Celular</td>
+          <td class="vista1">Correo Personal</td>
+          <td class="vista1">Escolaridad</td>
+          <td class="vista5">Nombre de la Licenciatura con Cédula Profesional (Afin a la Educación)</td>
+          <td class="vista2">Número de Cédula Profesional</td>
+          <td class="vista5">Nombre de la Licenciatura no Afin a la Educación (con Cédula)</td>
+          <td class="vista1">Número de Cédula Profesional</td>
+          <td class="vista1">Clinica Medico Familiar del ISSSTE que le Corresponde</td>
+          <td class="vista1">Institucion Bancaria de Deposito de Nomina</td>
+          <td class="vista1">Función</td>
+          <td class="vista1">Clave Presupuestal</td>
+          <td class="vista1">Motivo</td>
+          <td class="vista1">Adscipcion al C.C.T</td>
+          <td class="vista1">Escuela</td>
+          <td class="vista1">Clave economica</td>
+          <td class="vista1">C.C.T</td>
+          <td class="vista1">Zona Escolar</td>
+          <td class="vista1">C.C.T de Cobro</td>
+          <td class="vista1">Horas en el C.C.T</td>
+          <td class="vista1">Desde</td>
+          <td class="vista1">Hasta</td>
+          <td class="vista1">Ing. a la SEP. (dd/mm/aaaa)</td>
+          <td class="vista1">Ing. GOB. FED. (dd/mm/aaaa)</td>
+          <td class="vista1">Proceso por el Cual Obtuvo la Plaza</td>
+          <td class="vista1">Participacion en Procesos de Evaluacion</td>
+          <td class="vista1">Nivel de Carrera Magisterial</td>
+          <td class="vista1">Nivel de SDPC</td>
+          <td class="vista1">Adscripcion en la Plaza Adicional (Nombre de la Escuela, CCT, Clave Economica, Numero de Horas)</td>
+          <td class="vista1">Escuela</td>
+          <td class="vista1">Clave Economica</td>
+          <td class="vista1">C.C.T</td>
+          <td class="vista1">Zona Escolar</td>
+          <td class="vista1">C.C.T donde Cobra</td>
+          <td class="vista1">Clave Prosupuestal</td>
+          <td class="vista1">Experiencia Como Docente Frente a Grupo</td>
+          <td class="vista1">Experiencia sin Funciones Frente a Grupo</td>
+          <td class="vista1">Acciones</td>
+        </tr>
+           <tbody>
+        {% if Personal %}
+        {% for persona in Personal %}
+        <tr>
+          <!--<td class="usuers">{{persona.id }}</td>-->
+          <td class="usuers">{{persona.nombre}}</td>
+          <td class="usuers">{{persona.rfc}}</td>
+          <td class="usuers">{{persona.curp}}</td>
+          <td class="usuers">{{persona.calle_numero}}</td>
+          <td class="usuers">{{persona.colonia}}</td>
+          <td class="usuers">{{persona.delegacion}}</td>
+          <td class="usuers">{{persona.codigo_pos}}</td>
+          <td class="usuers">{{persona.entidad}}</td>
+          <td class="usuers">{{persona.telefono_part}}</td>
+          <td class="usuers">{{persona.telefono_cel}}</td>
+          <td class="usuers">{{persona.correo_per}}</td>
+          <td class="usuers">{{persona.escolaridad}}</td>
+          <td class="usuers">{{persona.nombre_lin_ce_afin}}</td>
+          <td class="usuers">{{persona.numero_cedula}}</td>
+          <td class="usuers">{{persona.nombre_lin_ce_noafin}}</td>
+          <td class="usuers">{{persona.numero_cedula_noafin}}</td>
+          <td class="usuers">{{persona.clinica}}</td>
+          <td class="usuers">{{persona.banco}}</td>
+
+          <td class="usuers">{{persona.funcion}}</td>
+          <td class="usuers">{{persona.clave_presupuestal}}</td>
+          <td class="usuers">{{persona.motivo}}</td>
+          <td class="usuers">{{persona.adscrip}}</td>
+          <td class="usuers">{{persona.escuela}}</td>
+          <td class="usuers">{{persona.clave_eco}}</td>
+          <td class="usuers">{{persona.cct}}</td>
+          <td class="usuers">{{persona.zona_esco}}</td>
+          <td class="usuers">{{persona.cct_cobro}}</td>
+          <td class="usuers">{{persona.horas_cct}}</td>
+          <td class="usuers">{{persona.efecto_desde}}</td>
+          <td class="usuers">{{persona.efecto_hasta}}</td>
+          <td class="usuers">{{persona.ingre_sep}}</td>
+          <td class="usuers">{{persona.ingre_gob}}</td>
+          <td class="usuers">{{persona.obtubo_plaza}}</td>
+          <td class="usuers">{{persona.proceso_evaluacion}}</td>
+          <td class="usuers">{{persona.nivel_carrera}}</td>
+          <td class="usuers">{{persona.sdpc}}</td>
+
+          <td class="usuers">{{persona.adscrip_adi}}</td>
+          <td class="usuers">{{persona.escuela_adi}}</td>
+          <td class="usuers">{{persona.clave_eco_adi}}</td>
+          <td class="usuers">{{persona.cct_adi}}</td>
+          <td class="usuers">{{persona.zona_esco_adi}}</td>
+          <td class="usuers">{{persona.cct_cobro_adi}}</td>
+          <td class="usuers">{{persona.clave_presupuestal_adi}}</td>
+          <td class="usuers">{{persona.expe_docente}}</td>
+          <td class="usuers">{{persona.expe_sinfunciones}}</td>
+
+          <td>
+            <a href="{% url 'datoslaborales:datoslaborales_editar' persona.id %}">Editar</a>
+            <a href="{% url 'datoslaborales:datoslaborales_eliminar' persona.id %}">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+
+        {% else %}
+        <h4>Aun no hay registros</h4>
+        {% endif %}
+      </tbody>
+    </table>
+  </body>
+</html>

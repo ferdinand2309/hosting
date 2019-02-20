@@ -1,0 +1,317 @@
+.logo{
+  float: left;
+}
+.letras{
+  float: right;
+}
+.row{
+	padding: 5px;
+}
+#cicloe{
+	text-align: center;
+	width: 148px;
+	border: solid 1px black;
+	background: #ebf1de;
+}
+
+.est{
+	color: #ffffff;
+	background: #76943c;
+	text-align: center;
+}
+.tar{
+	background: #c4d79b;
+	text-align: center;
+}
+#nombre{
+	width: 250px;
+}
+#J_A, #T_C{
+		margin: 0px 0px 0px 570px;
+}
+#a{
+		margin: 0px 14px 0px 0px;
+}
+.ca6{
+		width: 650px;
+}
+#si{
+	color: #ffffff;
+	border: 1px solid black;
+	background: #76943c;
+	width:  348px;
+}
+
+#dic{
+		margin: 0px 0px 0px 20px;
+}
+#en{
+	margin: 0px 0px 0px 30px;
+}
+#pro{
+	margin: 0px 0px 0px 30px;
+}
+.cas{
+	width:  348px;
+	border: 1px solid black;
+	background: #c4d79b;
+}
+.rad{
+	width:  348px;
+	border: 1px solid black;
+}
+#situ{
+	margin: 0px 0px 0px 50px;
+}
+#enca{
+		margin: 0px 0px 0px 110px;
+}
+#prom{
+	margin: 0px 0px 0px 100px;
+}
+#RESPONSABLE{
+		width: 350px;
+}
+#C_E_I{
+		width: 300px;
+}
+.pag2{
+	color: #ffffff;
+	text-align: center;
+	background: #76943c;
+	margin: 15px 0px;
+}
+.grados{
+	border: solid 1px black;
+	width: 520px;
+}
+.estruc1{
+	background: #76943c;
+	width: 519px;
+	border: solid 0.5px black;
+}
+.gr{
+	color: #ffffff;
+	margin: 0px 15px;
+}
+.gr1{
+	color: #ffffff;
+	margin: 0px 40px;
+}
+.gr2{
+	color: #ffffff;
+	margin: 0px 22px 0px 0px;
+}
+.grt{
+	color: #ffffff;
+	margin: 0px 0px 0px 22px;
+}
+.g1{
+	margin: 0px 0px 0px 20px;
+	width: 30px;
+	background: #ebf1de;
+}
+.g11{
+	margin: 0px 0px 0px 10px;
+	width: 33px;
+	background: #ebf1de;
+}
+.g111{
+	margin: 0px 0px 0px 10px;
+	width: 33px;
+	background: #ebf1de;
+}
+.g112{
+	margin: 0px 0px 0px 45px;
+	width: 25px;
+	background: #ebf1de;
+}
+.g2{
+	margin: 0px 0px 0px 5px;
+	width: 30px;
+	background: #ebf1de;
+}
+.g22{
+	margin: 0px 0px 0px 20px;
+	width: 30px;
+	background: #ebf1de;
+}
+.g21{
+	margin: 0px 0px 0px 10px;
+	width: 33px;
+	background: #ebf1de;
+}
+.g212{
+	margin: 0px 0px 0px 10px;
+	width: 33px;
+	background: #ebf1de;
+}
+.g2122{
+	margin: 0px 0px 0px 35px;
+	width: 25px;
+	background: #ebf1de;
+}
+.g3{
+	margin: 0px 0px 0px 7px;
+	width: 30px;
+	background: #ebf1de;
+}
+.g33{
+	margin: 0px 0px 0px 20px;
+	width: 30px;
+	background: #ebf1de;
+}
+.g31{
+	margin: 0px 0px 0px 10px;
+	width: 33px;
+	background: #ebf1de;
+}
+.g313{
+	margin: 0px 0px 0px 10px;
+	width: 33px;
+	background: #ebf1de;
+}
+.g3133{
+	margin: 0px 0px 0px 35px;
+	width: 25px;
+	background: #ebf1de;
+}
+.dire, .doce, .sub, .subA, .mestro, .protic, .protich, .docsg, .dcda, .docOTN, .total{
+	width: 300px;
+		text-align: right;
+		float: left;
+}
+#dirr, #docee, #subb, #subAa, #mestroo, #proticc, #protichh, #docsgg, #dcdaa, #docOTNn{
+		width: 33px;
+		background: #ebf1de;
+		border: solid 1px black;
+}
+#totall{
+	width: 33px;
+	background: #76943c;
+	border: solid 1px black;
+}
+#maestro{
+	float: left;
+	width: 267px;
+}
+.conse, .conseCA, .asp1, .aspca, .aspotn, .tota, .adminis{
+	text-align: right;
+}
+#consee, #conseCAa, #aspp, #aspcaa, #aspotnn{
+		width: 25px;
+		background: #ebf1de;
+		border: solid 1px black;
+		float: right;
+
+}
+#totaa{
+	width: 25px;
+	background: #76943c;
+	border: solid 1px black;
+	float: right;
+}
+#adminiss{
+		width: 25px;
+		background: #76943c;
+		border: solid 1px black;
+		float: right;
+}
+.ezee{
+	width: 400px;
+	background:#76943c;
+	border:1px solid black;
+}
+.turn{
+	width: 400px;
+		background:#76943c;
+		text-align: right;
+		border:1px solid black;
+		color: #ffffff;
+}
+#super{
+		background: #c4d79b;
+		float: left;
+		width: 200px;
+		border:1px solid black;
+		text-align: center;
+}
+#sp1,#sp2,#sp3,#sp4,#sp5, #sp5DirOTN{
+	width: 34px;
+	background: #ebf1de;
+}
+#sp5, #sp5SuEF, #sp51{
+	background:#76943c;
+		width: 34px;
+}
+#spef{
+		background: #c4d79b;
+		float: left;
+		width: 200px;
+		border:1px solid black;
+		text-align: center;
+}
+.apo{
+		width: 400px;
+		background: #76943c;
+		border: solid 1px black;
+		color: #ffffff;
+}
+.atp, .loed, .director, .directorotn, .docente, .docenteca, .docenteotn, .docenteef, .docenteefca, .asp, .administrativo{
+		width: 200px;
+		background:#c4d79b;
+		border: solid 1px black;
+		float: left;
+		text-align: center;
+}
+#sp11, #sp21, #sp31, #sp41, #sp51{
+	width: 34px;
+	margin: 22px 0px 0px 0px;
+	background: #ebf1de;
+}
+#sp113, #sp213, #sp313, #sp413{
+	width: 34px;
+	background: #ebf1de;
+}
+#sp51, #sp51Dic, #sp5Dir, #sp5DirOTN, #sp5Doc, #sp5DocCA, #sp5DocOTN, #sp5DocEF, #sp5DocEFCA, #sp51ASP, #sp5113{
+  width: 34px;
+	background: #76943C;
+}
+.to{
+	float: right;
+}
+.DEF, .DEFCA, .DI, .DICA, .DEA, .DM, .T{
+	text-align: right;
+	width: 262px;
+	float: left;
+}
+#DEFF, #DEFCAA, #DII, #DICAA, #DEAA, #DMM{
+	float: right;
+	width: 33px;
+	background: #ebf1de;
+	border: solid 1px black;
+}
+#fisica{
+  width: 200px;
+}
+#TT{
+	float: right;
+	width: 33px;
+	background: #76943c;
+}
+.rooww{
+  width: 400px;
+  border: solid 1px #FFFFFF;
+}
+.cua5{
+  margin: 15px 0px 0px 0px;
+}
+.cua6, .cua7, .cua8, .cua9, .cua10, .cua11{
+  margin: 4px 0px 0px 0px;
+}
+.cua13{
+    margin: 11px 0px 0px 0px;
+}
+.buttonn{
+  float: right;
+}

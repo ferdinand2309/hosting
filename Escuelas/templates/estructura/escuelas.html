@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ficha de Identidad</title>
+    <link rel="stylesheet" href="{% static 'css/estilo1.css' %}">
+    <script src="{% static 'js/sumas.js' %}" type="text/javascript"> </script>
+    {% load bootstrap4 %}
+	  {% bootstrap_css %}
+  </head>
+  <body>
+    <div class="no row">
+  	<header>
+  			<div class="logo col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  				<img src="{% static 'img/SEP.jpg' %}">
+  			</div>
+  			<div class="letras col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  				<h6>Autoridad Educativa Federal en la Ciudad de México
+  				<br>Coordinación Sectorial de Educación Primaria
+  				<br>Dirección de Educacion Primaria No 5 en el D.F.
+  				<br>Oficina de Servicios Administrativos
+  				<br>Sección de Recursos Humanos
+  				<br>Módulo de Estructuras Educativas
+  			</h6>
+  			</div>
+  	</header>
+	</div>
+  <br>
+    <form method="post">
+      {% csrf_token %}
+      <div class="row">
+      <div class="CICLOE col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		      <div class="ce">
+			         <label for="">CICLO ESCOLAR:</label>
+			         <input type="text" name="ciclo_escolar" id="cicloe" required>
+               <a href="{% url 'logout' %}" class="buttonn">Salir</a>
+		      </div>
+
+	   </div>
+  <div class="botones col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <a href="{% url 'datoslaborales:datoslaborales' %}" class="button">Nuevo Personal</a>
+    <a href="{% url 'datoslaborales:datoslaborales_listar' %}" class="button">Personal</a>
+  </div>
+  </div>
+   <nav id="prin">
+    		<div class="est">
+    			ESTRUCTURAS EDUCATIVAS N° 5
+    		</div>
+    		<div class="tar">
+    			  Tarjeta de Identificación del Centro de Trabajo
+    		</div>
+    	</nav>
+      <section class="formu">
+    	<div id="formulario">
+        <div class="row">
+    		<div class="n_1 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    				<label class="ca1">Nombre del Centro de Trabajo</label>
+            <input type="text" name="Nombre_Centro" id="nombre" class="ca11" required>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    				<label class="ca">Teléfono</label>
+            <input type="tel" name="telefono" id="numero" class="c" required>
+    		</div>
+        </div>
+        <div class="row">
+  				<div class="n_2 col-xs-12 col-sm-5 col-md-5 col-lg-5">
+  					<label class="ca2">Centro de Trabajo</label>
+            <input type="text" name="centro_trabajo" id="centro_tra" class="ca22" required>
+          </div>
+          <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+            <input type="radio" name="mat" id="MAT" value="MAT">
+  					<label for="MAT" id="m">MAT</label>
+          </div>
+  		    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+            <input type="radio" name="eps" id="EPS" value="EPS">
+  					<label for="EPS" id="EPSs">EPS</label>
+          </div>
+  				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+  					<label class="ca_2">Dirección Operativa</label>
+            <input type="text" name="direccion_operativa" id="Dirección_op" class="ca_2" required>
+  				</div>
+        </div>
+        <div class="row">
+								<div class="n_3 col-xs-12 col-sm-5 col-md-5 col-lg-5">
+									<label class="ca3">Clave Económica </label>
+                  <input type="numero" name="clave_economica" id="Clave_Ec" class="ca3" required>
+                </div>
+                <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                  <input type="radio" name="vesp" id="VESP" value="VESP">
+									<label for="VESP" id="v">VESP </label>
+                </div>
+                <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                  <input type="radio" name="noct" id="NOCT" value="NOCT">
+									<label for="NOCT" id="noc">NOCT </label>
+                </div>
+									<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+									<label class="ca4 ">N° de Zona </label>
+                  <input type="numero" name="n_zona" id="N_zona" class="ca4" required>
+								</div>
+        </div>
+        <div class="row">
+								<div class="n_4 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<input type="radio" name="j_a" id="J_A" value="J.A.">
+									<label for="J_A" id="a">J.A. </label>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<input type="radio" name="zona" id="Zona" value="Zona.">
+									<label for="ZONA">Zona</label>
+								</div>
+        </div>
+        <div class="row">
+								<div class="n_5  col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<input type="radio" name="t_c" id="T_C" value="T.C">
+									<label for="T.C">T.C</label>
+								</div>
+          </div>
+          <div class="row">
+									<div class="n_6 col-xs-12 col-sm-8 col-md-8 col-lg-8">
+											<label class="">Domicilio completo</label>
+                      <input type="texto" name="domicilio_intitucional" id="Domicilio" class="ca6" required>
+									</div>
+                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+									<div class="cas">
+                    <label for="Situacion"id="si">SITUACIÓN DEL RESPONSABLE DEL PLANTEL</label>
+                    <br>
+										<label for="Dictaminado" id="dic">Dictaminado</label>
+										<label for="Dictaminado" id="en">Encargado</label>
+										<label for="Dictaminado" id="pro">Promoción</label>
+									</div>
+									<div class="rad ">
+										<input type="radio" name="dictaminado" id="situ" value="Dictaminado">
+										<input type="radio" name="encargado" id="enca" value="Encargado">
+										<input type="radio" name="promocion" id="prom" value="Promoción">
+									</div>
+                  </div>
+              </div>
+              <div class="row">
+										<div class="respon col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<label for="respon">Nombre Responsable:</label>
+												<input type="texto" name="nombre_responsable" id="RESPONSABLE" required>
+										</div>
+              </div>
+              <div class="row">
+													<div class="CEI col-xs-12 col-sm-12 col-md-12 col-lg-12">
+														<label for="">Correo Electrónico Institucional:</label>
+														<input type="email" name="correo_intitucional" id="C_E_I" required>
+													</div>
+              </div>
+
+            <div class="pag2">
+						<label id="pag2">ESTRUCTURA GRUPAL</label>
+				</div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="grados">
+					<div class="estruc1">
+						<label for="Grado" id="gru">Grado</label>
+						<label for="1°" class="gr1">1°</label>
+						<label for="2°" class="gr2">2°</label>
+						<label for="3°" class="gr">3°</label>
+						<label for="4°" class="gr">4°</label>
+						<label for="5°" class="gr">5°</label>
+						<label for="6°" class="gr">6°</label>
+						<label for="9/14" class="gr">9/14</label>
+						<label for="Total"class="grt" id="grt">Total</label>
+					</div>
+
+					<div class="estruc2">
+						<label for="Grupos">Grupos</label>
+						<input type="text" name="grupo_pri" class="g1" >
+						<input type="text" name="grupo_seg" class="g1" >
+						<input type="text" name="grupo_ter" class="g1" >
+						<input type="text" name="grupo_cua" class="g11" >
+						<input type="text" name="grupo_qui" class="g11" >
+						<input type="text" name="grupo_sex" class="g11" >
+						<input type="text" name="grupo_nueve_catorse" class="g111" >
+            <input type="text" name="grupo_tot" class="g112" id="spTotal">
+					</div>
+
+					<div class="estruc3">
+							<label for="Matrícula">Matrícula</label>
+							<input type="text" name="matri_pri" class="g2" >
+							<input type="text" name="matri_seg" class="g22" >
+							<input type="text" name="matri_ter" class="g22" >
+							<input type="text" name="matri_cua" class="g21" >
+							<input type="text" name="matri_qui" class="g21" >
+							<input type="text" name="matri_sex" class="g21" >
+							<input type="text" name="matri_nueve_catorse" class="g212" >
+              <input type="text" name="matri_tot" class="g2122" id="spTotal1">
+
+					</div>
+
+					<div class="estruc4">
+							<label for="Docentes">Docentes</label>
+							<input type="text" name="doce_pri" class="g3" >
+							<input type="text" name="doce_seg" class="g33" >
+							<input type="text" name="doce_ter" class="g33" >
+							<input type="text" name="doce_cua" class="g31" >
+							<input type="text" name="doce_qui" class="g31" >
+							<input type="text" name="doce_sex" class="g31" >
+							<input type="text" name="doce_nueve_catorse" class="g313" >
+              <input type="text" name="doce_tot" class="g3133" id="spTotal2">
+					</div>
+				</div>
+        </div>
+
+
+        <div class="dir col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<div class="dire">
+						<label for="dir" >Director(a)</label>
+						<input type="text" name="director" id="dirr" onchange="sumarDOCENTES(this.value);"/>
+					</div>
+
+						<div class="doce">
+							<label for="doce">Docentes Frente a Grupo</label>
+							<input type="text" name="docentes_frente_grupo" id="docee" onchange="sumarDOCENTES(this.value);"/>
+						</div>
+
+						<div class="sub">
+							<label for="sub">Subdirector de Gestión Escolar</label>
+							<input type="text" name="sub_gestion" id="subb" onchange="sumarDOCENTES(this.value);"/>
+						</div>
+
+            <div class="subA">
+							<label for="subA">Subdirector Académico</label>
+							<input type="text" name="sub_aca" id="subAa" onchange="sumarDOCENTES(this.value);"/>
+						</div>
+
+            <div class="mestro">
+							<label id="maestro">Maestro de Taller de Lectura y Escritura</label>
+								<input type="text" name="maes_tall" id="mestroo" onchange="sumarDOCENTES(this.value);"/>
+						</div>
+
+            <div class="protic">
+							<label>Promotor de TIC (E0280)</label>
+							<input type="text" name="Promotor_tic_e0280" id="proticc" onchange="sumarDOCENTES(this.value);"/>
+						</div>
+
+            <div class="protich">
+								<label for="protich">Promotor de TIC (Clave de  horas)</label>
+							<input type="text" name="Promotor_tic_horas" id="protichh" onchange="sumarDOCENTES(this.value);"/>
+						</div>
+
+            <div class="docsg">
+							<label for="docsg">Docente sin Grupo</label>
+							<input type="text" name="docentes_sin_grupo" id="docsgg" onchange="sumarDOCENTES(this.value);"/>
+						</div>
+
+            <div class="dcda">
+              <label for="dcda">Docente con Cambio de Actividad</label>
+              <input type="text" name="docentes_cambio_actividad" id="dcdaa" onchange="sumarDOCENTES(this.value);"/>
+            </div>
+
+            <div class="docOTN">
+              <label for="docOTN">Docente OTN</label>
+              <input type="text" name="Docente_OTN" id="docOTNn" onchange="sumarDOCENTES(this.value);"/>
+            </div>
+
+            <div class="total">
+              <label for="total">Total</label>
+              <input value="" name="total1" class="form-control entrada-usuario" id="totall">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="Admin">
+              <div class="conse">
+                <label id="conse">Conserje</label>
+                <input type="text" name="Conserje" id="consee">
+              </div>
+
+              <div class="conseCA">
+                <label id="conseCA">Conserje C/A</label>
+                <input type="text" name="Conserje_C_A" id="conseCAa">
+              </div>
+
+              <div class="asp1">
+                <label id="asp">Asistente de Servicios en Plantel</label>
+                  <input type="text" name="Asis_ser_plan" id="aspp">
+              </div>
+
+              <div class="aspca">
+                <label for="aspca">Asistente de Servicios en Plantel C/A</label>
+                <input type="text" name="Asis_ser_plan_C_A" id="aspcaa">
+              </div>
+
+              <div class="aspotn">
+                <label for="aspotn">Asistente de Servicios en Plantel OTN</label>
+                <input type="text" name="Asis_ser_plan_OTN" id="aspotnn">
+              </div>
+
+              <div class="tota">
+                  <label for="tota">Total</label>
+                  <input type="text" name="total2" id="totaa" value="">
+              </div>
+
+              <br>
+              <br>
+              <br>
+              <div class="adminis">
+                <label for="adminis">Administrativo</label>
+                  <input type="text" name="administrativo" id="adminiss">
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="exze col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="rooww">
+  					<div class="ezee">
+  						<label id="eze">EXCLUSIVAMENTE ZONA ESCOLAR</label>
+  					</div>
+  							<div class="turn">
+  								<label>MAT</label>
+  								<label>VESP</label>
+  								<label>DISC.</label>
+  								<label>OTRO</label>
+  								<label>Total</label>
+  							</div>
+
+                <div class="sup">
+									<label id="super">Supervisor</label>
+								</div>
+								<div class="cua1">
+									<input type="text" name="Supervisor_Mat" id="sp1" >
+									<input type="text" name="Supervisor_Vep" id="sp2" >
+									<input type="text" name="Supervisor_Dis" id="sp3" >
+									<input type="text" name="Supervisor_Otr" id="sp4" >
+                  <input type="text" name="Supervisor_Tot" id="sp5" >
+                </div>
+
+                <div class="spefe">
+            									<label id="spef">Supervisor E.F</label>
+            								</div>
+            								<div class="cua2">
+            									<input type="text" name="Supervisor_E_F_Mat" id="sp1" >
+            									<input type="text" name="Supervisor_E_F_Vep" id="sp2" >
+            									<input type="text" name="Supervisor_E_F_Dis" id="sp3" >
+            									<input type="text" name="Supervisor_E_F_Otr" id="sp4" >
+                              <input type="text" name="Supervisor_E_F_Tot" id="sp5SuEF" >
+            								</div>
+
+                <div class="apo">
+									<label>APOYOS</label>
+								</div>
+
+							<div class="atp ">
+								<label for="atp">ATP Matemáticas dictaminado</label>
+							</div>
+							<div class="cua3">
+								<input type="text" name="APT_Mate_Dic_Mat" id="sp11" >
+								<input type="text" name="APT_Mate_Dic_Vep" id="sp21" >
+								<input type="text" name="APT_Mate_Dic_Dis" id="sp31" >
+								<input type="text" name="APT_Mate_Dic_Otr" id="sp41" >
+                <input type="text" name="APT_Mate_Dic_Tot" id="sp51" >
+							</div>
+
+
+              <div class="loed">
+                <label for="">ATP Lenguaje Oral y Escrito Dictaminado</label>
+              </div>
+              <div class="cua4">
+                <input type="text" name="APT_LOE_Mat" id="sp11" >
+                <input type="text" name="APT_LOE_Vep" id="sp21" >
+                <input type="text" name="APT_LOE_Dis" id="sp31" >
+                <input type="text" name="APT_LOE_Otr" id="sp41" >
+                <input type="text" name="APT_LOE_Tot" id="sp51Dic" >
+              </div>
+
+
+              <div class="director">
+								<label for="">Director</label>
+							</div>
+							<div class="cua5">
+								<input type="text" name="Director_Mat" id="sp1" >
+								<input type="text" name="Director_Vep" id="sp2" >
+								<input type="text" name="Director_Dis" id="sp3" >
+								<input type="text" name="Director_Otr" id="sp4" >
+                <input type="text" name="Director_Tot" id="sp5Dir" >
+							</div>
+
+              <div class="directorotn">
+								<label for="">Director OTN</label>
+							</div>
+							<div class="cua6">
+								<input type="text" name="Director_OTN_Mat" id="sp1" >
+								<input type="text" name="Director_OTN_Vep" id="sp2" >
+								<input type="text" name="Director_OTN_Dis" id="sp3" >
+								<input type="text" name="Director_OTN_Otr" id="sp4" >
+                <input type="text" name="Director_OTN_Tot" id="sp5DirOTN" >
+							</div>
+
+              <div class="docente">
+								<label for="">Docente</label>
+							</div>
+							<div class="cua7">
+								<input type="text" name="Docente_Mat" id="sp1" >
+								<input type="text" name="Docente_Vep" id="sp2" >
+								<input type="text" name="Docente_Dis" id="sp3" >
+								<input type="text" name="Docente_Otr" id="sp4" >
+                <input type="text" name="Docente_Tot" id="sp5Doc" >
+							</div>
+
+              <div class="docenteca">
+								<label for="">Docente C/A</label>
+							</div>
+							<div class="cua8">
+								<input type="text" name="Docente_C_A_Mat" id="sp1" >
+								<input type="text" name="Docente_C_A_Vep" id="sp2" >
+								<input type="text" name="Docente_C_A_Dis" id="sp3" >
+								<input type="text" name="Docente_C_A_Otr" id="sp4" >
+                <input type="text" name="Docente_C_A_Tot" id="sp5DocCA" >
+							</div>
+
+              <div class="docenteotn">
+  							<label for="">Docente OTN</label>
+  						</div>
+  						<div class="cua9">
+  							<input type="text" name="Docente_OTN_Mat" id="sp1" >
+  							<input type="text" name="Docente_OTN_Vep" id="sp2" >
+  							<input type="text" name="Docente_OTN_Dis" id="sp3" >
+  							<input type="text" name="Docente_OTN_Otr" id="sp4" >
+                <input type="text" name="Docente_OTN_Tot" id="sp5DocOTN" >
+  						</div>
+
+              <div class="docenteef">
+                <label for="">Docente E.F.</label>
+              </div>
+              <div class="cua10">
+                <input type="text" name="Docente_E_F_Mat" id="sp1" >
+                <input type="text" name="Docente_E_F_Vep" id="sp2" >
+                <input type="text" name="Docente_E_F_Dis" id="sp3" >
+                <input type="text" name="Docente_E_F_Otr" id="sp4" >
+                <input type="text" name="Docente_E_F_Tot" id="sp5DocEF" >
+              </div>
+
+              <div class="docenteefca">
+  								<label for="">Docente E.F. C/A</label>
+  						</div>
+  						<div class="cua11">
+  							<input type="text" name="Docente_E_F_C_A_Mat" id="sp1">
+  							<input type="text" name="Docente_E_F_C_A_Vep" id="sp2">
+  							<input type="text" name="Docente_E_F_C_A_Dis" id="sp3">
+  							<input type="text" name="Docente_E_F_C_A_Otr" id="sp4">
+                <input type="text" name="Docente_E_F_C_A_Tot" id="sp5DocEFCA">
+  						</div>
+
+              <div class="asp">
+  							<label for="">ASP (Funciones Administrativas)</label>
+  						</div>
+  						<div class="cua12">
+  							<input type="text" name="ASP_Mat" id="sp11" >
+  							<input type="text" name="ASP_Vep" id="sp21" >
+  							<input type="text" name="ASP_Dis" id="sp31" >
+  							<input type="text" name="ASP_Otr" id="sp41" >
+                <input type="text" name="ASP_Tot" id="sp51ASP">
+  						</div>
+
+              <div class="administrativo">
+  							<label for="">Administrativo</label>
+  						</div>
+  						<div class="cua13">
+  							<input type="text" name="administrativo_Mat" id="sp113" >
+  							<input type="text" name="administrativo_Vep" id="sp213" >
+  							<input type="text" name="administrativo_Dis" id="sp313" >
+  							<input type="text" name="administrativo_Otr" id="sp413" >
+                <input type="text" name="administrativo_Tot" id="sp5113">
+  						</div>
+
+              <div class="to">
+  							<input type="text" name="total" value="" id="sp5113">
+                <label name="total" value="" id="sp5113To"></label>
+  						</div>
+              </div>
+
+            </div>
+
+
+          <div class=" ultima col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="docentesEF">
+            <div class="DEF">
+              <label for="">Docente(s) de Educación Física</label>
+              <input type="text" name="docentes_edu_fis" id="DEFF" value="">
+            </div>
+
+            <div class="DEFCA">
+                <label id="fisica">Docente(s) de Educación Física C/A</label>
+              <input type="text" name="docentes_edu_fis_C_A" id="DEFCAA" value="">
+            </div>
+
+            <div class="DI">
+							<label for="">Docente(s) de Inglés</label>
+							<input type="text" name="docentes_ingles" id="DII" value="">
+						</div>
+
+            <div class="DICA">
+							<label for="">Docente(s) de Inglés C/A</label>
+							<input type="text" name="docentes_ingles_C_A" id="DICAA" value="">
+						</div>
+
+            <div class="DEA">
+              <label for="">Docente(s) de Educación Artistica</label>
+              <input type="text" id="DEAA" name="docentes_edu_art" value="">
+            </div>
+
+            <div class="DM">
+              <label for="">Docente(s) Música</label>
+              <input type="text" name="docentes_musica" id="DMM" value="">
+            </div>
+
+            <div class="T">
+              <label for="">Total</label>
+              <input name="total3" id="TT" value="">
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="ce col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  							<label for="">Fecha de elaboración:</label>
+  							<input type="date" name="fecha_elaboracion" id="cicloe">
+                <button type="submit">Guardar</button>
+  					</div>
+
+  </form>
+  </body>
+</html>

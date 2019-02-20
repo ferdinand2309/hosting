@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sabana de Datos</title>
+    <link rel="stylesheet" href="{% static 'css/estilo2.css' %}">
+    <script src="{% static 'js/operaciones.js' %}" type="text/javascript"> </script>
+    {% load bootstrap4 %}
+	  {% bootstrap_css %}
+  </head>
+  <body>
+    <div class="no row">
+  	<header>
+  			<div class="logo col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  				<img src="{% static 'img/SEP.jpg' %}">
+  			</div>
+  			<div class="letras col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  				<h6>Autoridad Educativa Federal en la Ciudad de México
+  				<br>Coordinación Sectorial de Educación Primaria
+  				<br>Dirección de Educacion Primaria No 5 en el D.F.
+  				<br>Oficina de Servicios Administrativos
+  				<br>Sección de Recursos Humanos
+  				<br>Módulo de Estructuras Educativas
+  			</h6>
+  			</div>
+  	</header>
+	</div>
+<br>
+<br>
+    <form method="post">
+      {% csrf_token %}
+      <nav id="prin">
+      <label for="" id="plan">Plantilla De Personal</label>
+    </nav>
+
+      <div class="datospersonale">
+          <div class="DP">
+            <label for="">Datos Personales</label>
+          </div>
+          <div class="datos row">
+            <div class="nom col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <label for="">(Apellido Paterno, Materno y Nombre(s) )</label>
+              <br>
+              <input type="text" name="nombre" id="nombre" required="">
+            </div>
+            <div class="rfc col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <label for="">RFC (13 Caracteres)</label>
+              <br>
+              <input type="text" name="rfc" required="">
+            </div>
+            <div class="CURP col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <label for="">CURP (18 Caracteres)</label>
+              <br>
+              <input type="text" name="curp" required="">
+            </div>
+          </div>
+
+<div class="CA2">
+         <div class="dp">
+           <label for="">Domicilio Particular</label>
+         </div>
+         <div class="datos2">
+           <div class="row">
+           <div class="numca col-xs-12 col-sm-3 col-md-3 col-lg-3">
+             <label for="">Calle Y Número</label>
+             <br>
+             <input type="text" name="calle_numero" id="callenum" required="">
+           </div>
+           <div class="colo col-xs-12 col-sm-3 col-md-3 col-lg-3">
+             <label for="">Colonia</label>
+             <br>
+             <input type="text" name="colonia" id="colo" required="">
+           </div>
+
+           <div class="DoM col-xs-12 col-sm-2 col-md-2 col-lg-2">
+             <label for="">Delegación ó Municipio</label>
+             <br>
+             <select class="" name="delegacion" required="">
+               <option value=""></option>
+               <option value="Álvaro Obregón">Álvaro Obregón</option>
+               <option value="Azcapotzalco">Azcapotzalco</option>
+               <option value="Benito Juárez">Benito Juárez</option>
+               <option value="Coyoacán">Coyoacán</option>
+               <option value="Cuajimalpa">Cuajimalpa</option>
+               <option value="Cuauhtémoc">Cuauhtémoc</option>
+               <option value="Gustavo A. Madero">Gustavo A. Madero</option>
+               <option value="Iztacalco">Iztacalco</option>
+               <option value="Iztapalapa">Iztapalapa</option>
+               <option value="Magdalena Contreras">Magdalena Contreras</option>
+               <option value="Miguel Hidalgo">Miguel Hidalgo</option>
+               <option value="Milpa Alta">Milpa Alta</option>
+               <option value="Tláhuac">Tláhuac</option>
+               <option value="Tlalpan">Tlalpan</option>
+               <option value="Venustiano Carranza">Venustiano Carranza</option>
+               <option value="Xochimilco">Xochimilco</option>
+             </select>
+           </div>
+
+           <div class="cp col-xs-12 col-sm-2 col-md-2 col-lg-2">
+             <label for="">Código Postal</label>
+             <br>
+             <input type="number" name="codigo_pos" id="cp" required="">
+           </div>
+           <div class="ent col-xs-12 col-sm-2 col-md-2 col-lg-2">
+               <label for="">Entidad</label>
+               <br>
+               <input type="text" name="entidad" required="">
+           </div>
+           </div>
+           <p></p>
+           <div class="row">
+           <div class="telP  col-xs-12 col-sm-4 col-md-4 col-lg-4">
+             <label for="">Teléfono Particular</label>
+             <br>
+             <input type="number" name="telefono_part" id="telP" required="">
+           </div>
+           <div class="telC  col-xs-12 col-sm-4 col-md-4 col-lg-4">
+             <label for="">Teléfono Celular</label>
+             <br>
+             <input type="number" name="telefono_cel" required="">
+           </div>
+           <P>
+           <div class="coep  col-xs-12 col-sm-4 col-md-4 col-lg-4">
+             <label for="">Correo Electrónico Personal</label>
+             <br>
+             <input type="email" name="correo_per" id="coep" required="">
+           </div>
+           </div>
+           <p></p>
+           <div class="row">
+           <div class="esco col-xs-12 col-sm-4 col-md-4 col-lg-4">
+             <label for="">Escolaridad (Nivel de Escolaridad)</label>
+             <br>
+             <select class="" name="escolaridad" required="">
+               <option value=""></option>
+               <option value="00 - Sin Estudios">00 - Sin Estudios</option>
+               <option value="A0 - Primaria">A0 - Primaria</option>
+               <option value="B0 - Carrera Comercial">B0 - Carrera Comercial</option>
+               <option value="C0 - Carrera Tecnica">C0 - Carrera Tecnica</option>
+               <option value="D0 - Secundaria">D0 - Secundaria</option>
+               <option value="E0 - Bachillerato">E0 - Bachillerato</option>
+               <option value="F0 - Normal Basica sin Licenciatura">F0 - Normal Basica sin Licenciatura</option>
+               <option value="G0 - Normal Superior">G0 - Normal Superior</option>
+               <option value="H0 - Pasante de Carrera Profecional">H0 - Pasante de Carrera Profecional</option>
+               <option value="I0 - Profecional (Licenciatura)">I0 - Profecional (Licenciatura)</option>
+               <option value="J0 - Postgrado">J0 - Postgrado</option>
+             </select>
+           </div>
+           <P>
+           <div class="nlp col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <label for="">Nombre de la Licenciatura con Cedula Profesional (Afín a la Educación)</label>
+               <br>
+              <input type="text" value="" name="nombre_lin_ce_afin"  required="">
+           </div>
+        <P>
+          <div class="ndcp col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label for="">Numero de Cedula Profesional</label>
+             <br>
+            <input type="text" value="" name="numero_cedula" required="" >
+          </div>
+           </div>
+        <P>
+          <div class="row">
+          <div class="ndlnae col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <label for="">Nombre de la Licenciatura no Afín a la Educación (con Cedula)</label>
+             <br>
+            <input type="text"  value="" name="nombre_lin_ce_noafin" id="nombre_lin_ce_afin" >
+          </div>
+        <P>
+          <div class="ndcpno col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <label for="">Numero de Cedula Profesional</label>
+             <br>
+            <input type="text" value="" name="numero_cedula_noafin">
+          </div>
+           <p></p>
+           <div class="CLINICA col-xs-12 col-sm-3 col-md-3 col-lg-3">
+             <label for="">Clínica Médico Familiar del ISSSTE que le Corresponde</label>
+               <br>
+             <input type="text" name="clinica" required="">
+           </div>
+           <div class="insbdn col-xs-12 col-sm-3 col-md-3 col-lg-3">
+             <label for="">Institución Bancaria de Deposito de Nomina</label>
+             <br>
+             <select name="banco" required="">
+             <option value="Banamex">Banamex</option>
+             <option value="Bancomer">Bancomer</option>
+             <option value="Otro">Otro</option>
+             </select>
+           </div>
+         </div>
+         </div>
+       </div>
+       </div>
+
+      <div class="DatosLaborales">
+          <div class="dl">
+              <label for="">Datos Laborales</label>
+          </div>
+          <div class="fun">
+            <div class="">
+              <div class="FUNCION col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <label for="">Función</label>
+                <br>
+                <select class="" name="funcion" required="">
+                  <option value=""></option>
+                  <option value="Director (A)">Director (A)</option>
+                  <option value="Subdirector de Gestión Escolar">Subdirector de Gestión Escolar</option>
+                  <option value="Subdirector Académico">Subdirector Académico</option>
+                  <option value="Maestro de Taller de Lectura y Escritura">Maestro de Taller de Lectura y Escritura</option>
+                  <Option Value="Promotor de Tic">Promotor de Tic</Option>
+                  <Option Value="Docente">Docente</Option>
+                  <Option Value="Docente con Cambio de Actividad">Docente con Cambio de Actividad</Option>
+                  <Option Value="Docente OTN (Orientación Técnica Normativa)">Docente OTN (Orientación Técnica Normativa)</Option>
+                  <Option Value="Docente 1° A">Docente 1° A</Option>
+                  <Option Value="Docente 1° B">Docente 1° B</Option>
+                  <Option Value="Docente 1° C">Docente 1° C</Option>
+                  <Option Value="Docente 1° D">Docente 1° D</Option>
+                  <Option Value="Docente 1° E">Docente 1° E</Option>
+                  <Option Value="Docente 2° A">Docente 2° A</Option>
+                  <Option Value="Docente 2° B">Docente 2° B</Option>
+                  <Option Value="Docente 2° C">Docente 2° C</Option>
+                  <Option Value="Docente 2° D">Docente 2° D</Option>
+                  <Option Value="Docente 2° E">Docente 2° E</Option>
+                  <Option Value="Docente 3° A">Docente 3° A</Option>
+                  <Option Value="Docente 3° B">Docente 3° B</Option>
+                  <Option Value="Docente 3° C">Docente 3° C</Option>
+                  <Option Value="Docente 3° D">Docente 3° D</Option>
+                  <Option Value="Docente 3° E">Docente 3° E</Option>
+                  <Option Value="Docente 4° A">Docente 4° A</Option>
+                  <Option Value="Docente 4° B">Docente 4° B</Option>
+                  <Option Value="Docente 4° C">Docente 4° C</Option>
+                  <Option Value="Docente 4° D">Docente 4° D</Option>
+                  <Option Value="Docente 4° E">Docente 4° E</Option>
+                  <Option Value="Docente 5° A">Docente 5° A</Option>
+                  <Option Value="Docente 5° B">Docente 5° B</Option>
+                  <Option Value="Docente 5° C">Docente 5° C</Option>
+                  <Option Value="Docente 5° D">Docente 5° D</Option>
+                  <Option Value="Docente 5° E">Docente 5° E</Option>
+                  <Option Value="Docente 6° A">Docente 6° A</Option>
+                  <Option Value="Docente 6° B">Docente 6° B</Option>
+                  <Option Value="Docente 6° C">Docente 6° C</Option>
+                  <Option Value="Docente 6° D">Docente 6° D</Option>
+                  <Option Value="Docente 6° E">Docente 6° E</Option>
+                  <Option Value="Docente 9-14">Docente 9-14</Option>
+                  <Option Value="Docente de Educación Física">Docente de Educación Física</Option>
+                  <Option Value="Docente de Educación Física Con C/A">Docente de Educación Física Con C/A</Option>
+                  <Option Value="Docente de Educación Física Otn">Docente de Educación Física Otn</Option>
+                  <Option Value="Docente de Ingles">Docente de Ingles</Option>
+                  <Option Value="Docente de Ingles Con C/A<">Docente de Ingles Con C/A</Option>
+                  <Option Value="Conserje">Conserje</Option>
+                  <Option Value="Conserje con Cambio de Actividad">Conserje con Cambio de Actividad</Option>
+                  <Option Value="Asistente de Servicios en Plantel">Asistente de Servicios en Plantel</Option>
+                  <Option Value="Asistente de Servicios en Plantel con Cambio de Actividad">Asistente de Servicios en Plantel con Cambio de Actividad</Option>
+                  <Option Value="Asistente de Servicios en Plantel OTN">Asistente de Servicios en Plantel OTN</Option>
+                  <Option Value="Supervisor">Supervisor</Option>
+                  <Option Value="Supervisor de Educación Física">Supervisor de Educación Física</Option>
+                  <Option Value="ATP de Zona Matemáticas Dictaminado">ATP de Zona Matemáticas Dictaminado</Option>
+                  <Option Value="ATP de Zona Lenguaje Oral y Escrito Dictaminado">ATP de Zona Lenguaje Oral y Escrito Dictaminado</Option>
+                  <Option Value="ASP en Zona con Funciones Administrativas">ASP en Zona con Funciones Administrativas</Option>
+                  <Option Value="Administrativo de Zona<">Administrativo de Zona</Option>
+                </select>
+              </div>
+            </div>
+          <p></p>
+          <div class="row">
+          <div class="clavep col-xs-12 col-sm-8 col-md-8 col-lg-8">
+              <label for="">Clave Presupuestal 22 Caracteres (de Acuerdo al Instructivo)</label>
+              <br>
+              <select class="claveprosupuestal" id="cla1" onchange="add();">
+                <option></option>
+                <option value="071151  "> 071151 (Docentes, E.F, Inglés Y TIC¨s, Taller)</option>
+                <option value="073304  "> 073304 (Servicios Y Administrativas)</option>
+              </select>
+              <select class="claveprosupuestal2 " id="cla2" onchange="add();">
+                <option></option>
+                <option value="E0220000">E0220000 (Director)</option>
+                <option value="E0280000">E0280000 (Docente)</option>
+                <option value="E0299000">E0299000 (Dcocente)</option>
+                <option value="E0762">E0762 (Educación Física y Tic's)</option>
+                <option value="E03001">E03001 (Ingles)</option>
+                <option value="E03002">E03002 (Ingles)</option>
+                <option value="S01E07000">S01E07000(Conserje y Asistente de Servicio en Plantel)</option>
+                <option value="S01E02040">S01E02040 (Oficial de Servicio y Mantenimiento)</option>
+                <option value="S01E03040">S01E03040 (Administrativos)</option>
+                <option value="S01E04040">S01E04040 (Administrativos)</option>
+                <option value="S01E05040">S01E05040 (Administrativos)</option>
+              </select>
+              </div>
+              <div class="horasEducaTica col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <label for="">Exclusivo Educación Física y Tic's (Horas)</label>
+                <br>
+                <input type="number" name="" value="" id="cla3" onkeyup='add();'>
+              </div>
+              <div class="horasingles col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <label for="">Exclusivo Ingles (Horas)</label>
+                <br>
+                <input type="number" name="" value="" id="cla4" onkeyup='add();'>
+              </div>
+              </div>
+              <div class="row">
+              <div class="claveprosupuestalpersonal col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <label for="">Últimos 7 Dígitos de la Clave Presupuestal</label>
+                <br>
+                <input type="number" name="" value="" id="cla5" onkeyup='add();'>
+              </div>
+              <div class="CPcomple col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label for="">Clave Prosupuestal</label>
+                <br>
+                <input type="text" id="showId" class="form-control entrada-usuario" name="clave_presupuestal" required="">
+              </div>
+            </div>
+          <p></p>
+          <div class="row">
+          <div class="motivo col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <label for="">Motivó</label>
+              <br>
+              <select class="" name="motivo" required="">
+                <option value=""></option>
+                <option value="10 - Alta Definitiva Previa a SPD">10 - Alta Definitiva Previa a SPD</option>
+                <option value="11 - Alta Provisional">11 - Alta Provisional</option>
+                <option value="12 - Prorroga de Alta Provisional">12 - Prorroga de Alta Provisional</option>
+                <option value="13 - Alta Provisional SPD">13 - Alta Provisional SPD</option>
+                <option value="14 - Prorroga de Alta Provisional SPD">14 - Prorroga de Alta Provisional SPD</option>
+                <option value="15 - Alta Provisional en Gravidez">15 - Alta Provisional en Gravidez</option>
+                <option value="16 - Alta Provisional en Gravidez SPD">16 - Alta Provisional en Gravidez SPD</option>
+                <option value="17 - Alta Provisional en Pensión">17 - Alta Provisional en Pensión</option>
+                <option value="18 - Alta Provisional en Pensión SPD">18 - Alta Provisional en Pensión SPD</option>
+                <option value="19 - Alta Provisional Sustituto de Becario">19 - Alta Provisional Sustituto de Becario</option>
+                <option value="20 - Alta Interina Limitada">20 - Alta Interina Limitada</option>
+                <option value="23 - Alta Interino en Plaza Inicial">23 - Alta Interino en Plaza Inicial</option>
+                <option value="24 - Alta Limitada por Licencia de Gravidez">24 - Alta Limitada por Licencia de Gravidez</option>
+                <option value="25 - Alta Limitada por Licencia Prepensionaria">25 - Alta Limitada por Licencia Prepensionaria</option>
+                <option value="26 - Prorroga en Vacante Temporal">26 - Prorroga en Vacante Temporal</option>
+                <option value="27 - Alta por Promoción de SPD">27 - Alta por Promoción de SPD</option>
+                <option value="28 - Alta en Movimiento Lateral SPD">28 - Alta en Movimiento Lateral SPD</option>
+                <option value="29 - Alta en Dirección por Promoción SPD">29 - Alta en Dirección por Promoción SPD</option>
+                <option value="41 - Licencia por Asuntos Particulares">41 - Licencia por Asuntos Particulares</option>
+                <option value="42 - Licencia por Pasar a Otro Empleo">42 - Licencia por Pasar a Otro Empleo</option>
+                <option value="43 - Licencia por Comisión Sindical o Elección Popular">43 - Licencia por Comisión Sindical o Elección Popular</option>
+                <option value="44 - Licencia por Gravidez">44 - Licencia por Gravidez</option>
+                <option value="48 - Licencia Prepensionaria">48 - Licencia Prepensionaria</option>
+                <option value="61 - Reanudación de Lab. por Termino de Lic. por Asuntos Particulares">61 - Reanudación de Lab. por Termino de Lic. por Asuntos Particulares</option>
+                <option value="62 - Reanudación de Lab. por Termino de Lic. por Pasar a Otro Empleo">62 - Reanudación de Lab. por Termino de Lic. por Pasar a Otro Empleo</option>
+                <option value="63 - Reanudación de Lab. por Termino de Lic.pPor Comisión Sind./Elec. Pop.">63 - Reanudación de Lab. por Termino de Lic.pPor Comisión Sind./Elec. Pop.</option>
+                <option value="88 - Alta Provisional Sustituto de Becario SPD">88 - Alta Provisional Sustituto de Becario SPD</option>
+                <option value="89 - Alta Por Tiempo Fijo Por Ingreso Al SPD">89 - Alta Por Tiempo Fijo Por Ingreso Al SPD</option>
+                <option value="90 - Alta sin Concurso SPD en Vacante Definitiva">90 - Alta sin Concurso SPD en Vacante Definitiva</option>
+                <option value="91 - Alta por SPD en Vacante Temporal">91 - Alta por SPD en Vacante Temporal</option>
+                <option value="92 - Alta sin Concurso SPD en Vacante Temporal">92 - Alta sin Concurso SPD en Vacante Temporal</option>
+                <option value="93 - Alta en Direccion por Promoción Temporal SPD">93 - Alta en Direccion por Promoción Temporal SPD</option>
+                <option value="94 - Alta en Direccion por Promoción Temporal sin SPD">94 - Alta en Direccion por Promoción Temporal sin SPD</option>
+                <option value="95 - Alta Interina Provisional">95 - Alta Interina Provisional</option>
+                <option value="97 - Prorroga De Nombramiento">97 - Prorroga De Nombramiento</option>
+                <option value="FR - Alta en Supervisión por Promoción Temporal SPD">FR - Alta en Supervisión por Promoción Temporal SPD</option>
+                <option value="ES - Alta en Supervisión por Promoción Temporal sin SPD">ES - Alta en Supervisión por Promoción Temporal sin SPD</option>
+                <option value="FU - Alta Definitiva SPD">FU - Alta Definitiva SPD</option>
+                <option value="FV - Alta Definitiva Tras Evaluación SPD">FV - Alta Definitiva Tras Evaluación SPD</option>
+                <option value="FW - Alta Definitiva por Promoción a Direccion SPD">FW - Alta Definitiva por Promoción a Direccion SPD</option>
+                <option value="FY - Alta Definitiva por Promoción a Supervisión SPD">FY - Alta Definitiva por Promoción a Supervisión SPD</option>
+                <option value="FZ - Alta Definitiva por Promoción a ATP SPD">FZ - Alta Definitiva por Promoción a ATP SPD</option>
+                <option value="FZ - Alta Definitiva por Ratificación a Docente SPD">FZ - Alta Definitiva por Ratificación a Docente SPD</option>
+              </select>
+          </div>
+          </div>
+          <p></p>
+          <div class="row">
+          <div class="ads col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <label for="">Adscripción al C.C.T.</label>
+            <br>
+            <input type="date" name="adscrip" required="">
+          </div>
+          <div class="escuela col-xs-12 col-sm-2 col-md-2 col-lg-2">
+              <label for="">Escuela</label>
+              <br>
+              <input type="text" name="escuela" required="">
+          </div>
+          <div class="clave_eco col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <label for="">Clave Económica</label>
+            <br>
+            <input type="text" name="clave_eco" required="">
+          </div>
+          <div class="CCT col-xs-12 col-sm-2 col-md-2 col-lg-2">
+              <label for="">C.C.T</label>
+              <br>
+              <input type="text" name="cct" required="">
+          </div>
+          <div class="zona_esco col-xs-12 col-sm-2 col-md-2 col-lg-2">
+              <label for="">Zona Escolar</label>
+              <br>
+              <input type="text" name="zona_esco" required="">
+          </div>
+          <div class="CCTcobro col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <label for="">C.C.T donde Cobra</label>
+            <br>
+            <input type="text" name="cct_cobro" required="">
+          </div>
+          </div>
+          <P>
+            <div class="row">
+              <div class="horas col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <label for="">Horas en el C.T. (Exclusivo Para Promotor De Tic, Educación Física E Inglés)</label>
+                <br>
+                <input type="text" name="horas_cct">
+              </div>
+            </div>
+          <p></p>
+          <div class="EFECTOS">
+            <label for="">EFECTOS</label>
+          </div>
+          <div class="row">
+          <div class="dh col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <label for="">Desde</label>
+            <input type="date" name="efecto_desde" required="">
+            <br>
+            <label for="" id="hasta">Hasta</label>
+            <input type="date" name="efecto_hasta" required="">
+          </div>
+          <P>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="ING-s">
+            <label for="" id="sep">Ing. a la SEP. (dd/mm/aaaa)</label>
+            <input type="date" name="ingre_sep" required="">
+          </div>
+          <div class="ING-gf">
+            <label>Ing. GOB. FED. (dd/mm/aaaa)</label>
+            <input type="date" name="ingre_gob" required="">
+          </div>
+          </div>
+          </div>
+          <P>
+          <div class="row">
+          <div class="obplaza col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label for="">Proceso por el Cual Obtuvo la Plaza</label>
+            <br>
+            <input type="text" name="obtubo_plaza" required="" id="procesoplaza">
+          </div>
+          <P>
+          <div class="parproev col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label for="">Participación en Procesos de Evaluación</label>
+              <br>
+            <input type="text" name="proceso_evaluacion" required="" id="procesoevaluacion">
+          </div>
+          <P>
+          <div class="ncm col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <label for="">Nivel de Carrera Magisterial</label>
+              <br>
+            <select class="" name="nivel_carrera" required="">
+              <option></option>
+              <option value="Ninguno">Ninguno</option>
+              <option value="7A">7A</option>
+              <option value="7B">7B</option>
+              <option value="7C">7C</option>
+              <option value="7D">7D</option>
+              <option value="7E">7E</option>
+              <option value="N1">N1</option>
+              <option value="N2">N2</option>
+              <option value="N3">N3</option>
+              <option value="K1">K1</option>
+              <option value="K2">K2</option>
+              <option value="K3">K3</option>
+              <option value="KW">KW</option>
+            </select>
+          </div>
+          <div class="SDPC col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <label for="">Nivel de SDPC</label>
+            <br>
+            <select class="" name="sdpc" required="">
+              <option></option>
+              <option value="N1">N1</option>
+              <option value="N2">N2</option>
+              <option value="N3">N3</option>
+              <option value="N4">N4</option>
+              <option value="N5">N5</option>
+              <option value="N6">N6</option>
+            </select>
+          </div>
+          </div>
+          </div>
+        </div>
+        <div class="datosplaza">
+         <label for="">Datos de la Plaza Adicional</label>
+       </div>
+       <div class="dtp">
+         <div class="row">
+           <div class="adspa col-xs-12 col-sm-12 col-md-12 col-lg-12">
+             <label for="">Adscripción en la Plaza Adicional (Nombre de la Escuela, CCT, Clave Económica, Número de Horas)</label>
+             <br>
+             <input type="date" name="adscrip_adi">
+          </div>
+        </div>
+        <div class="row">
+       <div class="escuela col-xs-12 col-sm-3 col-md-3 col-lg-3">
+           <label for="">Escuela</label>
+           <br>
+           <input type="text" name="escuela_adi">
+       </div>
+       <div class="clave_eco col-xs-12 col-sm-3 col-md-3 col-lg-3">
+         <label for="">Clave Económica</label>
+         <br>
+         <input type="text" name="clave_eco_adi">
+       </div>
+       <div class="CCT col-xs-12 col-sm-2 col-md-2 col-lg-2">
+           <label for="">C.C.T</label>
+           <br>
+           <input type="text" name="cct_adi">
+       </div>
+       <div class="zona_esco col-xs-12 col-sm-2 col-md-2 col-lg-2">
+           <label for="">Zona Escolar</label>
+           <br>
+           <input type="text" name="zona_esco_adi">
+       </div>
+       <div class="CCTcobro col-xs-12 col-sm-2 col-md-2 col-lg-2">
+         <label for="">C.C.T donde Cobra</label>
+         <br>
+         <input type="text" name="cct_cobro_adi">
+       </div>
+       </div>
+       <p></p>
+       <div class="row">
+       <div class="clavepa col-xs-12 col-sm-8 col-md-8 col-lg-8">
+           <label for="">Clave Presupuestal 22 Caracteres (de Acuerdo al Instructivo)</label>
+           <br>
+           <select class="claveprosupuestala" id="cla11" onchange="add1();">
+             <option></option>
+             <option value="071151  "> 071151 (Docentes, E.F, Inglés Y TIC¨s, Taller)</option>
+             <option value="073304  "> 073304 (Servicios Y Administrativas)</option>
+           </select>
+           <select class="claveprosupuestal2a" id="cla22" onchange="add1();">
+             <option></option>
+             <option value="E0220000">E0220000 (Director)</option>
+             <option value="E0280000">E0280000 (Docente)</option>
+             <option value="E0299000">E0299000 (Dcocente)</option>
+             <option value="E0762">E0762 (Educación Física y Tic's)</option>
+             <option value="E03001">E03001 (Ingles)</option>
+             <option value="E03002">E03002 (Ingles)</option>
+             <option value="S01E07000">S01E07000(Conserje y Asistente de Servicio en Plantel)</option>
+             <option value="S01E02040">S01E02040 (Oficial de Servicio y Mantenimiento)</option>
+             <option value="S01E03040">S01E03040 (Administrativos)</option>
+             <option value="S01E04040">S01E04040 (Administrativos)</option>
+             <option value="S01E05040">S01E05040 (Administrativos)</option>
+           </select>
+           </div>
+           <div class="horasEducaTica col-xs-12 col-sm-2 col-md-2 col-lg-2">
+             <label for="">Exclusivo Educación Física y Tic's (Horas)</label>
+             <br>
+             <input type="number" name="" value="" id="cla33" onkeyup='add1();'>
+           </div>
+           <div class="horasinglesa col-xs-12 col-sm-2 col-md-2 col-lg-2">
+             <label for="">Exclusivo Ingles (Horas)</label>
+             <br>
+             <input type="number" name="" value="" id="cla44" onkeyup='add1();'>
+           </div>
+           </div>
+           <p></p>
+           <div class="row">
+           <div class="claveprosupuestalpersonala col-xs-12 col-sm-6 col-md-6 col-lg-6">
+             <label for="">Últimos 7 Dígitos de la Clave Presupuestal</label>
+             <br>
+             <input type="number" name="" value="" id="cla55" onkeyup='add1();'>
+           </div>
+           <div class="CPcomplea col-xs-12 col-sm-4 col-md-4 col-lg-4">
+             <label for="">Clave Prosupuestal</label>
+             <br>
+             <input type="text" id="showId1" class="form-control entrada-usuario1" name="clave_presupuestal_adi">
+           </div>
+           </div>
+       <p></p>
+       <div class="row">
+       <div class="Expfg col-xs-12 col-sm-6 col-md-6 col-lg-6">
+         <label for="">Experiencia Como Docente Frente a Grupo</label>
+         <br>
+         <input type="text" name="expe_docente">
+       </div>
+     <P>
+       <div class="Expffg col-xs-12 col-sm-6 col-md-6 col-lg-6">
+         <label for="">Experiencia sin Funciones Frente a Grupo</label>
+         <br>
+         <input type="text" name="expe_sinfunciones">
+       </div>
+        </div>
+        <p></p>
+       <button type="submit">Registrar</button>
+     </div>
+    </form>
+  </body>
+</html>

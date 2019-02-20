@@ -1,0 +1,17 @@
+.logo{
+  float: left;
+}
+h1{
+  color:  #76943c;
+  text-align: center;
+}
+h5{
+  color: #c4d79b;
+  text-align: center;
+}
+.usu, .btn{
+  margin: 0px 630px 0px 630px;
+}
+.us, .con{
+  margin: 0px 580px 0px 580px;
+}
